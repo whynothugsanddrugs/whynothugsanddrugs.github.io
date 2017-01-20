@@ -347,11 +347,43 @@
 
     }
 
+
+    p {
+      text-align: center;
+      color: #b5b5b5;
+      padding-bottom: 50px;
+    }
+
     iframe.soundcloud {width: 700px; height: 150px; border-radius: 64px;}
+
+    #btn {
+      outline:white solid 0.5px;
+      padding: 6px 8px;
+      border-radius: 3px;
+      background-color: rgba(0,0,0, .25);
+      color: black;
+      font-weight: bold;
+      border: none;
+      margin: 0;
+      /*box-shadow: 0px 2px 3px #444;*/
+    }
+
+    #btn:hover {
+       background-color: rgba(0,0,0,.30);
+    }
+
+    #fff {
+        font-family: helvetica, arial, sans-serif;
+        font-size: 19pt;
+        color: rgba(0,0,0,.6);
+    }
 
   </style>
 <link rel="stylesheet" type="text/css" href="chrome-extension://pkehgijcmpdhfbdbbnkijodmdjhbjlgp/skin/socialwidgets.css"></head>
 <body class=" hasGoogleVoiceExt">
+
+  <button id="btn"><div id="fff">This is a test</div></button>
+  <button id="btn"><div id="fff">This is a test</div></button>
 
 <a class="something" style="
     height: 10rem;
