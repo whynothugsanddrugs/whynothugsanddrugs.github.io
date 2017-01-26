@@ -18,6 +18,7 @@
   ga('send', 'pageview');
 
   </script>
+  <script src="demo/hammer.min.js"></script>
   <script type="text/javascript">
    var makeBSS=function(a,b){var c=document.querySelectorAll(a),d={},e={init:function(a,b){this.counter=0,this.el=a,this.$items=a.querySelectorAll("figure"),this.numItems=this.$items.length,b=b||{},b.auto=b.auto||!1,this.opts={auto:"undefined"==typeof b.auto?!1:b.auto,speed:"undefined"==typeof b.auto.speed?1500:b.auto.speed,pauseOnHover:"undefined"==typeof b.auto.pauseOnHover?!1:b.auto.pauseOnHover,fullScreen:"undefined"==typeof b.fullScreen?!1:b.fullScreen,swipe:"undefined"==typeof b.swipe?!1:b.swipe},this.$items[0].classList.add("bss-show"),this.injectControls(a),this.addEventListeners(a),this.opts.auto&&this.autoCycle(this.el,this.opts.speed,this.opts.pauseOnHover),this.opts.fullScreen&&this.addFullScreen(this.el),this.opts.swipe&&this.addSwipe(this.el)},showCurrent:function(a){this.counter=a>0?this.counter+1===this.numItems?0:this.counter+1:this.counter-1<0?this.numItems-1:this.counter-1,[].forEach.call(this.$items,function(a){a.classList.remove("bss-show")}),this.$items[this.counter].classList.add("bss-show")},injectControls:function(a){var b=document.createElement("span"),c=document.createElement("span"),d=document.createDocumentFragment();b.classList.add("bss-prev"),c.classList.add("bss-next"),b.innerHTML="&laquo;",c.innerHTML="&raquo;",d.appendChild(b),d.appendChild(c),a.appendChild(d)},addEventListeners:function(a){var b=this;a.querySelector(".bss-next").addEventListener("click",function(){b.showCurrent(1)},!1),a.querySelector(".bss-prev").addEventListener("click",function(){b.showCurrent(-1)},!1),a.onkeydown=function(a){a=a||window.event,37===a.keyCode?b.showCurrent(-1):39===a.keyCode&&b.showCurrent(1)}},autoCycle:function(a,b,c){var d=this,e=window.setInterval(function(){d.showCurrent(1)},b);c&&(a.addEventListener("mouseover",function(){e=clearInterval(e)},!1),a.addEventListener("mouseout",function(){e=window.setInterval(function(){d.showCurrent(1)},b)},!1))},addFullScreen:function(a){var b=this,c=document.createElement("span");c.classList.add("bss-fullscreen"),a.appendChild(c),a.querySelector(".bss-fullscreen").addEventListener("click",function(){b.toggleFullScreen(a)},!1)},addSwipe:function(a){var b=this,c=new Hammer(a);c.on("swiperight",function(){b.showCurrent(-1)}),c.on("swipeleft",function(){b.showCurrent(1)})},toggleFullScreen:function(a){document.fullscreenElement||document.mozFullScreenElement||document.webkitFullscreenElement||document.msFullscreenElement?document.exitFullscreen?document.exitFullscreen():document.msExitFullscreen?document.msExitFullscreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitExitFullscreen&&document.webkitExitFullscreen():document.documentElement.requestFullscreen?a.requestFullscreen():document.documentElement.msRequestFullscreen?a.msRequestFullscreen():document.documentElement.mozRequestFullScreen?a.mozRequestFullScreen():document.documentElement.webkitRequestFullscreen&&a.webkitRequestFullscreen(a.ALLOW_KEYBOARD_INPUT)}};[].forEach.call(c,function(a){d=Object.create(e),d.init(a,b)})};
 
@@ -121,15 +122,12 @@
       </p>
     </a>
 
-    <p>Envelope #3: <br> Bottles Up <br>by Marisa Lee</p>
+    <p>Envelope #3: <br> Bottled Up <br>by Marisa Lee</p>
 
     <div  width="50%" class="bss-slides"  style="width: 775px;
     margin: 2em auto;">
         <figure>
         <img src="1m.jpg" width="50%" style="margin-bottom: 50px;">
-        </figure>
-        <figure>
-            <img src="2.jpg" width="50%" />
         </figure>
         <figure>
             <img src="2.jpg" width="50%" />
@@ -147,7 +145,6 @@
             <img src="6.jpg" width="50%" />
         </figure>
         <!-- more figures here as needed -->
-
     </div>    
 
    <p>Envelope #4: <br> What are you hopeful for, in your community? <br>by Logan Williams</p>
@@ -183,12 +180,16 @@
   </p>
 </a>
 
-<p>Envelope #8: <br> Fanonenon <br>by Min Yoon</p>
+<p> <a  target="_blank" href="7b_Min_Fanonenon.pdf"> Envelope #8: <br> Fanonenon <br></a>by Min Yoon</p>
+<p style="
+      font-size: 1.25em;">an ominous and theatrical guessing game,<br> 
+about words that fit everyone,<br>  
+in that they fit no one</p>
 <a class="something" style="height: 10rem;">
   <p>
-  <img src="Dogs.jpg" style="
-      width: 35rem;
-      height: 45rem;">
+  <img src="fanonenon.jpg" style="
+      width: 45rem;
+      height: 35rem;">
   </p>
 </a>
 
@@ -201,10 +202,10 @@
   </p>
 </a>
 
-<p>Envelope #10: <br> I might be wrong <br>by Meriel Mees</p>
+<p> <a  target="_blank" href="9b_Meriel_Imightbewrong.pdf"> Envelope #10: <br> I might be wrong</a> <br>by Meriel Mees</p>
 <a class="something" style="height: 10rem;">
   <p>
-  <img src="Dogs.jpg" style="
+  <img src="unnamed.jpg" style="
       width: 50rem;
       height: 34rem;">
   </p>
@@ -231,6 +232,29 @@
 
 <p>Envelope #13: <br> Power for your pocket <br>by Elise Bernal</p>
 
+<div  width="50%" class="bss-slides"  style=" width: 580px; height: 775px;
+    margin: 2em auto;">
+        <figure>
+          <img src="Z0.jpg" style="width: 500px; height: 775px;">
+        </figure>
+        <figure>
+          <img src="Z1.jpg" style="width: 500px; height: 775px;">
+        </figure>
+        <figure>
+            <img src="Z2.jpg"  style="width: 500px; height: 775px;">
+        </figure>
+        <figure>
+            <img src="Z3.jpg"  style="width: 500px; height: 775px;">
+        </figure>
+        <figure>
+            <img src="Z4.jpg"  style="width: 500px; height: 775px;">
+        </figure>
+        <figure>
+            <img src="Z5.jpg"  style="width: 500px; height: 775px;">
+        </figure>
+        <!-- more figures here as needed -->
+    </div>    
+
 <a class="something" style="
     height: 47rem;
 ">
@@ -251,9 +275,9 @@
 <p>Envelope #15: <br> How to move a mountain <br>by Margaret McCarthy</p>
 <a class="something" style="height: 10rem;">
   <p>
-  <img src="Dogs.jpg" style="
-      width: 50rem;
-      height: 34rem;">
+  <img src="howtomoveamountain.jpg" style="
+    width: 35rem;
+    height: 40rem;">
   </p>
 </a>
 
@@ -274,12 +298,11 @@ If you are interested in sending a package, <br>submit an order <a href="https:/
 var opts = {
     fullScreen : false, 
     swipe : true
-};
+  };
+
+makeBSS('.bss-slides', opts);
 
 
-  makeBSS('.bss-slides', opts);
-
-  makeBSS('.bss-slides2', opts);
 </script>
     
 </body></html>
