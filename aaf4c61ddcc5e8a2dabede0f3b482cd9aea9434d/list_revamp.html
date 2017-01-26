@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>hush</title>
@@ -20,16 +22,22 @@
    var makeBSS=function(a,b){var c=document.querySelectorAll(a),d={},e={init:function(a,b){this.counter=0,this.el=a,this.$items=a.querySelectorAll("figure"),this.numItems=this.$items.length,b=b||{},b.auto=b.auto||!1,this.opts={auto:"undefined"==typeof b.auto?!1:b.auto,speed:"undefined"==typeof b.auto.speed?1500:b.auto.speed,pauseOnHover:"undefined"==typeof b.auto.pauseOnHover?!1:b.auto.pauseOnHover,fullScreen:"undefined"==typeof b.fullScreen?!1:b.fullScreen,swipe:"undefined"==typeof b.swipe?!1:b.swipe},this.$items[0].classList.add("bss-show"),this.injectControls(a),this.addEventListeners(a),this.opts.auto&&this.autoCycle(this.el,this.opts.speed,this.opts.pauseOnHover),this.opts.fullScreen&&this.addFullScreen(this.el),this.opts.swipe&&this.addSwipe(this.el)},showCurrent:function(a){this.counter=a>0?this.counter+1===this.numItems?0:this.counter+1:this.counter-1<0?this.numItems-1:this.counter-1,[].forEach.call(this.$items,function(a){a.classList.remove("bss-show")}),this.$items[this.counter].classList.add("bss-show")},injectControls:function(a){var b=document.createElement("span"),c=document.createElement("span"),d=document.createDocumentFragment();b.classList.add("bss-prev"),c.classList.add("bss-next"),b.innerHTML="&laquo;",c.innerHTML="&raquo;",d.appendChild(b),d.appendChild(c),a.appendChild(d)},addEventListeners:function(a){var b=this;a.querySelector(".bss-next").addEventListener("click",function(){b.showCurrent(1)},!1),a.querySelector(".bss-prev").addEventListener("click",function(){b.showCurrent(-1)},!1),a.onkeydown=function(a){a=a||window.event,37===a.keyCode?b.showCurrent(-1):39===a.keyCode&&b.showCurrent(1)}},autoCycle:function(a,b,c){var d=this,e=window.setInterval(function(){d.showCurrent(1)},b);c&&(a.addEventListener("mouseover",function(){e=clearInterval(e)},!1),a.addEventListener("mouseout",function(){e=window.setInterval(function(){d.showCurrent(1)},b)},!1))},addFullScreen:function(a){var b=this,c=document.createElement("span");c.classList.add("bss-fullscreen"),a.appendChild(c),a.querySelector(".bss-fullscreen").addEventListener("click",function(){b.toggleFullScreen(a)},!1)},addSwipe:function(a){var b=this,c=new Hammer(a);c.on("swiperight",function(){b.showCurrent(-1)}),c.on("swipeleft",function(){b.showCurrent(1)})},toggleFullScreen:function(a){document.fullscreenElement||document.mozFullScreenElement||document.webkitFullscreenElement||document.msFullscreenElement?document.exitFullscreen?document.exitFullscreen():document.msExitFullscreen?document.msExitFullscreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitExitFullscreen&&document.webkitExitFullscreen():document.documentElement.requestFullscreen?a.requestFullscreen():document.documentElement.msRequestFullscreen?a.msRequestFullscreen():document.documentElement.mozRequestFullScreen?a.mozRequestFullScreen():document.documentElement.webkitRequestFullscreen&&a.webkitRequestFullscreen(a.ALLOW_KEYBOARD_INPUT)}};[].forEach.call(c,function(a){d=Object.create(e),d.init(a,b)})};
 
   </script>
-  <link rel="stylesheet" href="simpleslydeshowstyles.css">
-  
-  
+
+    <link rel="stylesheet" href="simpleslydeshowstyles.css">
+
+    /* link for font */
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+
 
   <style type="text/css">
     p {
       text-align: center;
+        /*margin: auto;
+        width: 50%;*/
       color: #b5b5b5;
-      font-size: 2.25em;
-      font-family: georgia, serif;
+      font-size: 1.5em;/*2.25em;*/
+      font-family: 'Shadows Into Light Two', sans-serif;
+        /*font-family: 'Fira Sans Condensed', sans-serif;*/
       padding-bottom: 10px;
     }
 
@@ -47,11 +55,24 @@
     
     }
 
+    /*style for intro pragraph */
+    .intro {
+        text-align: justify;/*center;*/
+        margin: auto;
+        width: 50%;
+        color: #b5b5b5;
+        font-size: 1.5em;/*2.25em;*/
+        font-family: 'Shadows Into Light Two', sans-serif;
+        padding-bottom: 10px;
+    }
+
     img {
       width: 700px;
     }
   </style>
-    <link rel="stylesheet" type="text/css" href="chrome-extension://pkehgijcmpdhfbdbbnkijodmdjhbjlgp/skin/socialwidgets.css"></head>
+    <link rel="stylesheet" type="text/css" href="chrome-extension://pkehgijcmpdhfbdbbnkijodmdjhbjlgp/skin/socialwidgets.css">
+
+</head>
 <!-- width: inherit;
     display: block; -->
     <body class=" hasGoogleVoiceExt" style="background-color: black;
@@ -64,9 +85,36 @@
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     ">
+
+    <div>
+        <p class="intro"> <br><br>
+            Is there someone you’re feeling politically divided from that you want to reach out to?
+            Imagine this person receives a package in the mail, with 14 sealed envelopes inside, to
+            open one at a time or all at once. It’s a gift from you, made with care.<br><br>
+
+            Artists from around the nation have created and shared their reactions, encouragement,
+            perspectives, and hopes through their artworks, for you to share. All the art pieces
+            have been created with care, with the intent to share and connect with people with
+            different perspectives.
+
+            You can preview the artworks that will be included in the package, below. We’d also love to include your perspective,
+            if you’d like to add a letter or artwork for your receiver by completing the following survey.<br><br>
+
+            Like a box of chocolates, the pieces are all different, beautiful, and interesting. Some pieces are organically political.
+            You may love some pieces, you may not completely agree with some of the pieces. To be completely honest,
+            we also don’t know how each piece will be received by the person who’s receiving the packages but believe
+            that art has the potential to start new dialogues, reflections, and something creative on both ends.<br>
+
+        </p>
+    </div>
+
+    <div>
+        <p><br>The first piece that the receiver will see is this letter, introducing the envelopes.<br></p>
+    </div>
+
     <div>
 
-    <p>Envelope #1: <br> Hi Neighbor <br>by Kai Stewart</p>
+    <p><br>Envelope #1: <br> Hi Neighbor <br>by Kai Stewart</p>
     <a class="something" >
       <p>
         <img class="artimage" style=" width:500px;" src="hi_neighbor.jpg" >
